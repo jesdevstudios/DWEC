@@ -1,16 +1,20 @@
-import { obtenerLibros, agregarLibro } from './biblioteca.js';
+import { 
+  obtenerLibros, 
+  agregarLibro, 
+  eliminarLibro, 
+  ordenarPorPaginas, 
+  hayLibrosLargos, 
+  todosSonLibrosCortos 
+} from './biblioteca.js';
 
-console.log("--- Colección Inicial ---");
 console.log(obtenerLibros());
 
-const miNuevoLibro = {
-  id: 11,
-  titulo: "Donde los árboles cantan",
-  autor: "Laura Gallego",
-  paginas: 480
-};
+ordenarPorPaginas();
+console.log(obtenerLibros());
 
-agregarLibro(miNuevoLibro)
+console.log(hayLibrosLargos(500));
+console.log(todosSonLibrosCortos(500));
 
-console.log((obtenerLibros))
+console.log(hayLibrosLargos(2000));
+console.log(todosSonLibrosCortos(2000));
 

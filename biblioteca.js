@@ -11,10 +11,30 @@ const libros = [
     {id: 10, titulo: "Holly", autor: "Stephen King", paginas: 500},
 ]
 
-function agregarLibro(nuevoLibro) {
-    libros.push(nuevoLibro)
+
+export function agregarLibro(nuevoLibro) {
+  libros.push(nuevoLibro);
 }
 
-function obtenerLibros() {
-    return libros;
+export function obtenerLibros() {
+  return libros;
+}
+
+export function eliminarLibro(id) {
+  const indice = libros.findIndex(libro => libro.id === id);
+  if (indice !== -1) {
+    libros.splice(indice, 1);
+  }
+}
+
+export function ordenarPorPaginas() {
+  libros.sort((a, b) => a.paginas - b.paginas);
+}
+
+export function hayLibrosLargos(limitePaginas) {
+  return libros.some(libro => libro.paginas > limitePaginas);
+}
+
+export function todosSonLibrosCortos(limitePaginas) {
+  return libros.every(libro => libro.paginas < limitePaginas);
 }
