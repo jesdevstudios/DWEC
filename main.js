@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // main.js
 // Informe completo de la tienda. Ejecutar: node main.js
 // NO hace falta modificar este archivo: usa las funciones de tienda.js
@@ -52,3 +53,25 @@ console.log('Total facturado:', facturado, '€');
 console.log('Valor del almacén tras las ventas:', tienda.valorAlmacen(resultado.catalogo), '€');
 console.log('\nStock final:');
 tienda.graficoStock(resultado.catalogo).forEach((linea) => console.log(linea));
+=======
+import {
+  agregarEmpleado,
+  eliminarEmpleado,
+  buscarPorDepartamento,
+  calcularSalarioPromedio,
+  obtenerEmpleadosOrdenadosPorSalario,
+  obtenerEmpleados
+} from './empleados.js';
+
+agregarEmpleado({ id: 5, nombre: "Sofía Castro", departamento: "Marketing", salario: 3100 });
+agregarEmpleado({ id: 6, nombre: "Pedro López", departamento: "Ventas", salario: 2900 });
+
+console.log(buscarPorDepartamento("Sistemas"));
+
+console.log(calcularSalarioPromedio());
+
+console.log(obtenerEmpleadosOrdenadosPorSalario());
+
+eliminarEmpleado(4);
+console.log(obtenerEmpleados());
+>>>>>>> 983e4022a85c566d2f7913884a98fffafd812fb7
