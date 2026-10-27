@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+section {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Ejercicio 2 */
+.tarjeta {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+.tarjeta.resaltada {
+    background-color: coral;
+    color: white;
+}
+
+/* Ejercicio 4 */
+.caja {
+    width: 50px;
+    height: 50px;
+    background-color: purple;
+    position: relative;
+    top: 0;
+    left: 0;
+    outline: none; /* Para quitar el borde al hacer click */
+}
+.caja:focus {
+    box-shadow: 0 0 10px gold; /* Indica que está activa */
+}
+
+/* Ejercicio 5 */
+.paleta-contenedor {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.color-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* Ejercicio 6 */
+.campo-foco {
+    padding: 5px;
+    margin-bottom: 5px;
+    display: block;
+    transition: background-color 0.3s;
+}
+.campo-foco.activo {
+    background-color: yellow;
+}
+
+/* Ejercicio 7 y 8 */
+.caja-evento {
+    border: 1px solid black;
+    margin: 10px;
+}
+#log-eventos {
+    margin-top: 10px;
+    font-family: monospace;
+    background: #f4f4f4;
+    padding: 10px;
+    min-height: 50px;
+}

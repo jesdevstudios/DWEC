@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>EJER_04.1 - Eventos en JavaScript</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Ejercicios de Eventos</h1>
+
+    <!-- Ejercicio 1 -->
+    <section>
+        <h2>1. Contador de clics</h2>
+        <button id="boton-contador">Hacer clic</button>
+        <p>Clics: <span id="mostrar-contador">0</span></p>
+    </section>
+
+    <!-- Ejercicio 2 -->
+    <section>
+        <h2>2. Tarjeta sensible al ratón</h2>
+        <div id="tarjeta" class="tarjeta">Pasa el ratón por aquí</div>
+    </section>
+
+    <!-- Ejercicio 3 -->
+    <section>
+        <h2>3. Espejo de texto</h2>
+        <input type="text" id="input-texto" placeholder="Escribe algo...">
+        <p>Reflejo: <span id="espejo"></span></p>
+    </section>
+
+    <!-- Ejercicio 4 -->
+    <section>
+        <h2>4. Mover con el teclado</h2>
+        <p>Usa las flechas del teclado para mover la caja. Haz clic en la caja para activarla.</p>
+        <div id="caja-teclado" class="caja" tabindex="0"></div>
+    </section>
+
+    <!-- Ejercicio 5 -->
+    <section>
+        <h2>5. Paleta de colores</h2>
+        <div id="paleta" class="paleta-contenedor">
+            <button class="color-btn" style="background-color: red;" data-color="red"></button>
+            <button class="color-btn" style="background-color: blue;" data-color="blue"></button>
+            <button class="color-btn" style="background-color: green;" data-color="green"></button>
+        </div>
+        <p id="texto-color">El texto cambiará de color</p>
+    </section>
+
+    <!-- Ejercicio 6 -->
+    <section>
+        <h2>6. Grupo con foco</h2>
+        <form id="formulario-foco">
+            <input type="text" placeholder="Campo 1" class="campo-foco">
+            <input type="text" placeholder="Campo 2" class="campo-foco">
+            <input type="text" placeholder="Campo 3" class="campo-foco">
+        </form>
+    </section>
+
+    <!-- Ejercicio 7 y 8 combinados -->
+    <section>
+        <h2>7 y 8. Burbuja, Captura y Detener</h2>
+        <div id="abuelo" class="caja-evento" style="padding: 30px; background-color: lightgray;">
+            Abuelo
+            <div id="padre" class="caja-evento" style="padding: 30px; background-color: gray;">
+                Padre
+                <div id="hijo" class="caja-evento" style="padding: 30px; background-color: darkgray; color: white;">
+                    Hijo
+                    <button id="enlace-cancelar">Clic aquí (Detiene propagación)</button>
+                    <a href="https://google.com" id="enlace-prevenir">Ir a Google (Cancelado)</a>
+                </div>
+            </div>
+        </div>
+        <div id="log-eventos"></div>
+    </section>
+
+    <script type="module" src="principal.js"></script>
+</body>
+</html>
