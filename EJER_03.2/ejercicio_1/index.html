@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1 - Galería</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img id="imagen-principal" src="https://picsum.photos/id/10/300/200" alt="Principal">
+    
+    <div class="miniaturas">
+        <img class="miniatura activa" src="https://picsum.photos/id/10/300/200" onclick="cambiarImagenPrincipal(0)">
+        <img class="miniatura" src="https://picsum.photos/id/11/300/200" onclick="cambiarImagenPrincipal(1)">
+        <img class="miniatura" src="https://picsum.photos/id/12/300/200" onclick="cambiarImagenPrincipal(2)">
+        <img class="miniatura" src="https://picsum.photos/id/13/300/200" onclick="cambiarImagenPrincipal(3)">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

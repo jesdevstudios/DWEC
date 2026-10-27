@@ -1,0 +1,4 @@
+img { max-width: 300px; display: block; margin-bottom: 10px; }
+.miniaturas { display: flex; gap: 10px; }
+.miniatura { width: 80px; cursor: pointer; border: 2px solid transparent; }
+.activa { border-color: red; }
